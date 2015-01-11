@@ -40,7 +40,7 @@ hpc.load.data<- function(){
     hpc.data$DateTime <- strptime(hpc.data$DateTime, "%Y-%m-%d %H:%M:%S")
   }
   
-  #set default locale - (Portuguese is default in my country)
+  #Turn off specific locale - (Portuguese is default in my country)
   Sys.setlocale("LC_TIME", "C")
   
   hpc.data
