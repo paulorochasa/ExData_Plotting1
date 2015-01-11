@@ -39,6 +39,10 @@ hpc.load.data<- function(){
     hpc.data <- read.csv(hpc.tidy.file)
     hpc.data$DateTime <- strptime(hpc.data$DateTime, "%Y-%m-%d %H:%M:%S")
   }
+  
+  #set default locale - (Portuguese is default in my country)
+  Sys.setlocale("LC_TIME", "C")
+  
   hpc.data
 }
 
